@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tasneem Sweet Treats Bakery</title>
+    <title>Tasneem's Sweet Treats Bakery</title>
     <style>
         /* Global Styles */
         * {
@@ -18,43 +18,59 @@
             color: #000000;
         }
 
-        /* Header with Heart and Cupcake Pattern */
+        /* Header with Visible Hearts and Cupcakes Pattern */
         header {
             text-align: center;
-            padding: 60px 20px;
+            padding: 80px 20px;
             color: #ffffff;
             background-color: #ffb6c1; /* Soft Pink */
             
-            /* CSS Pattern for Hearts and Cupcakes */
-            background-image: 
-                url("data:image/svg+xml,%3Csvg xmlns='http://w3.org' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='%23ff69b4' fill-opacity='0.25'%3E%3Cpath d='M15 10 c-2-3-6-3-8 0-2 3 0 7 4 10 4-3 6-7 4-10 z'/%3E%3Cpath d='M43 40 c-1-2-1-4 1-5 2-1 4 0 4 2 0 2-2 3-5 3 z M40 45 h10 v2 a3 3 0 0 1-3 3 h-4 a3 3 0 0 1-3-3 z'/%3E%3C/g%3E%3C/svg%3E");
-            
+            /* High-reliability repeating pattern from standard web icons */
+            background-image: url('https://transparenttextures.com'), 
+                              linear-gradient(45deg, #ffb6c1 25%, #ffc0cb 25%, #ffc0cb 50%, #ffb6c1 50%, #ffb6c1 75%, #ffc0cb 75%, #ffc0cb 100%);
+            background-size: auto, 40px 40px;
             border-bottom: 5px solid #000000;
+            position: relative;
         }
 
+        /* Decorative Floating Emoji Badges for guaranteed visibility */
+        .decor-badge {
+            font-size: 2.5rem;
+            position: absolute;
+            background: #ffffff;
+            padding: 8px;
+            border-radius: 50%;
+            border: 3px solid #000000;
+            box-shadow: 3px 3px 0px #ff69b4;
+        }
+        .badge-1 { top: 20px; left: 10%; }
+        .badge-2 { bottom: 20px; right: 10%; }
+
         .header-box {
-            background-color: rgba(0, 0, 0, 0.85);
+            background-color: rgba(0, 0, 0, 0.9);
             display: inline-block;
-            padding: 20px 40px;
-            border-radius: 10px;
-            border: 2px solid #ffb6c1;
+            padding: 30px 50px;
+            border-radius: 12px;
+            border: 3px solid #ffb6c1;
+            position: relative;
+            z-index: 2;
         }
 
         header h1 {
-            font-size: 2.8rem;
+            font-size: 3rem;
             color: #ffb6c1;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
 
         header p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: #ffffff;
             font-style: italic;
         }
 
-        /* Main Layout */
+        /* Main Layout Container */
         .container {
             max-width: 1100px;
             margin: 40px auto;
@@ -64,22 +80,19 @@
         /* Introduction Section */
         .intro {
             text-align: center;
-            margin-bottom: 5px;
+            margin-bottom: 50px;
         }
 
         .intro h2 {
             font-size: 2.2rem;
             color: #000000;
-            position: relative;
-            display: inline-block;
             margin-bottom: 15px;
         }
 
-        /* Pink accent line under heading */
         .intro h2::after {
             content: '';
             display: block;
-            width: 60%;
+            width: 80px;
             height: 4px;
             background-color: #ffb6c1;
             margin: 8px auto 0 auto;
@@ -90,7 +103,7 @@
             font-size: 1.1rem;
             color: #444444;
             max-width: 600px;
-            margin: 0 auto 40px auto;
+            margin: 0 auto;
             line-height: 1.6;
         }
 
@@ -99,6 +112,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
+            margin-bottom: 60px;
         }
 
         /* Menu Card Items */
@@ -108,21 +122,12 @@
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 5px 5px 0px #ffb6c1;
-            transition: transform 0.2s ease;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card-img-placeholder {
-            height: 200px;
-            background-color: #ffb6c1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: #000000;
+        .card-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
             border-bottom: 2px solid #000000;
         }
 
@@ -142,13 +147,77 @@
             line-height: 1.4;
         }
 
+        /* Order / Contact Form Section */
+        .order-section {
+            background-color: #fcfcfc;
+            border: 3px dashed #ffb6c1;
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .order-section h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #000000;
+        }
+
+        .form-group input, 
+        .form-group textarea, 
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #000000;
+            border-radius: 8px;
+            font-size: 1rem;
+            background-color: #ffffff;
+        }
+
+        .form-group input:focus, 
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #ffb6c1;
+            background-color: #fff9fa;
+        }
+
+        button.submit-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #000000;
+            color: #ffffff;
+            border: 2px solid #000000;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        button.submit-btn:hover {
+            background-color: #ffb6c1;
+            color: #000000;
+            box-shadow: 4px 4px 0px #000000;
+        }
+
         /* Footer */
         footer {
             background-color: #000000;
             color: #ffffff;
             text-align: center;
             padding: 30px 20px;
-            margin-top: 60px;
+            margin-top: 80px;
             border-top: 5px solid #ffb6c1;
         }
 
@@ -156,29 +225,40 @@
             color: #ffb6c1;
             font-size: 0.9rem;
         }
+
+        /* Mobile adjustments */
+        @media (max-width: 600px) {
+            .decor-badge { display: none; }
+            header h1 { font-size: 2.2rem; }
+            .order-section { padding: 20px; }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Header Section with Pattern Background -->
+    <!-- Header Section with Pink Background, Sweets Pattern, and Floating Badges -->
     <header>
+        <div class="decor-badge badge-1">🧁</div>
+        <div class="decor-badge badge-2">❤️</div>
+        
         <div class="header-box">
             <h1>Tasneem's Sweet Treats</h1>
             <p>Baked with love, shared with joy</p>
         </div>
     </header>
 
-    <!-- Main Content Section -->
     <div class="container">
+        <!-- Welcome Intro -->
         <section class="intro">
             <h2>Welcome To My Bakery Page</h2>
-            <p>We craft delicious, beautiful, and custom baked goods for every special occasion in your life.</p>
+            <p>We craft custom cupcakes, spectacular cakes, and sweet baked treats tailored perfectly for your special celebrations.</p>
         </section>
 
-        <!-- Product Preview Grid -->
+        <!-- Menu / Product Display -->
         <main class="menu-grid">
             <div class="card">
-                <div class="card-img-placeholder">🧁 Cupcakes</div>
+                <!-- Replace the URL in src="" with a real cupcake photo later -->
+                <img src="https://unsplash.com" alt="Gourmet Cupcakes" class="card-img">
                 <div class="card-info">
                     <h3>Gourmet Cupcakes</h3>
                     <p>Fluffy, rich, and topped with our signature homemade buttercream frosting.</p>
@@ -186,7 +266,8 @@
             </div>
 
             <div class="card">
-                <div class="card-img-placeholder">🎂 Custom Cakes</div>
+                <!-- Replace the URL in src="" with a real cake photo later -->
+                <img src="https://unsplash.com" alt="Celebration Cakes" class="card-img">
                 <div class="card-info">
                     <h3>Celebration Cakes</h3>
                     <p>Beautifully designed multi-layer cakes tailored perfectly for weddings and birthdays.</p>
@@ -194,20 +275,41 @@
             </div>
 
             <div class="card">
-                <div class="card-img-placeholder">🍪 Fresh Cookies</div>
+                <!-- Replace the URL in src="" with a real cookie photo later -->
+                <img src="https://unsplash.com" alt="Fresh Cookies" class="card-img">
                 <div class="card-info">
                     <h3>Artisan Cookies</h3>
                     <p>Crispy edges with soft, chewy centers. Baked fresh throughout the day.</p>
                 </div>
             </div>
         </main>
-    </div>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2026 Sweet Treats Bakery. All Rights Reserved.</p>
-    </footer>
+        <!-- New Order Inquiry Form -->
+        <section class="order-section">
+            <h2>Place an Order Inquiry</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
 
-</body>
-</html>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="treat-type">What are you looking for?</label>
+                    <select id="treat-type" name="treat-type">
+                        <option value="cupcakes">Custom Cupcakes</option>
+                        <option value="cake">Celebration Cake</option>
+                        <option value="cookies">Artisan Cookies</option>
+                        <option value="other">Other Treats</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="details">Order Details & Event Date</label>
+                    <textarea id="details" name="details" rows="4" placeholder="Tell us about your event date, quantities, flavors, or theme ideas..." required></textarea>
+                </div>
 
