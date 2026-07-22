@@ -1,1 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Treats Bakery</title>
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        /* Header with Heart and Cupcake Pattern */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            color: #ffffff;
+            background-color: #ffb6c1; /* Soft Pink */
+            
+            /* CSS Pattern for Hearts and Cupcakes */
+            background-image: 
+                url("data:image/svg+xml,%3Csvg xmlns='http://w3.org' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='%23ff69b4' fill-opacity='0.25'%3E%3Cpath d='M15 10 c-2-3-6-3-8 0-2 3 0 7 4 10 4-3 6-7 4-10 z'/%3E%3Cpath d='M43 40 c-1-2-1-4 1-5 2-1 4 0 4 2 0 2-2 3-5 3 z M40 45 h10 v2 a3 3 0 0 1-3 3 h-4 a3 3 0 0 1-3-3 z'/%3E%3C/g%3E%3C/svg%3E");
+            
+            border-bottom: 5px solid #000000;
+        }
+
+        .header-box {
+            background-color: rgba(0, 0, 0, 0.85);
+            display: inline-block;
+            padding: 20px 40px;
+            border-radius: 10px;
+            border: 2px solid #ffb6c1;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            color: #ffb6c1;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #ffffff;
+            font-style: italic;
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Introduction Section */
+        .intro {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .intro h2 {
+            font-size: 2.2rem;
+            color: #000000;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        /* Pink accent line under heading */
+        .intro h2::after {
+            content: '';
+            display: block;
+            width: 60%;
+            height: 4px;
+            background-color: #ffb6c1;
+            margin: 8px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        .intro p {
+            font-size: 1.1rem;
+            color: #444444;
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+            line-height: 1.6;
+        }
+
+        /* Menu Grid */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        /* Menu Card Items */
+        .card {
+            background: #ffffff;
+            border: 2px solid #000000;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 5px 5px 0px #ffb6c1;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img-placeholder {
+            height: 200px;
+            background-color: #ffb6c1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #000000;
+            border-bottom: 2px solid #000000;
+        }
+
+        .card-info {
+            padding: 20px;
+        }
+
+        .card-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #000000;
+        }
+
+        .card-info p {
+            color: #555555;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            border-top: 5px solid #ffb6c1;
+        }
+
+        footer p {
+            color: #ffb6c1;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section with Pattern Background -->
+    <header>
+        <div class="header-box">
+            <h1>Sweet Treats</h1>
+            <p>Baked with love, shared with joy</p>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="container">
+        <section class="intro">
+            <h2>Welcome to Our Bakery</h2>
+            <p>We craft delicious, beautiful, and custom baked goods for every special occasion in your life.</p>
+        </section>
+
+        <!-- Product Preview Grid -->
+        <main class="menu-grid">
+            <div class="card">
+                <div class="card-img-placeholder">🧁 Cupcakes</div>
+                <div class="card-info">
+                    <h3>Gourmet Cupcakes</h3>
+                    <p>Fluffy, rich, and topped with our signature homemade buttercream frosting.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img-placeholder">🎂 Custom Cakes</div>
+                <div class="card-info">
+                    <h3>Celebration Cakes</h3>
+                    <p>Beautifully designed multi-layer cakes tailored perfectly for weddings and birthdays.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img-placeholder">🍪 Fresh Cookies</div>
+                <div class="card-info">
+                    <h3>Artisan Cookies</h3>
+                    <p>Crispy edges with soft, chewy centers. Baked fresh throughout the day.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 Sweet Treats Bakery. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
 
